@@ -40,8 +40,6 @@ function App() {
           <option value="6">Cyrilic</option>
         </select>
 
-        <input type="number" placeholder="Number of paragraphs"/>
-
         <input type="number" placeholder="Number of words by paragraphs" />
 
         <button type="submit">Generate</button>

@@ -9,10 +9,16 @@ class Generator {
             'corpus', 'oculus', 'sanguis', 'mare', 'natura', 'culex', 'avis',
             'saxum', 'lapis', 'arena', 'telum', 'lignum', 'homo', 'error', 'sonus',
             'somnum', 'oris', 'nasus', 'malum', 'pullum', 'caeruleum', 'album',
-            'nero', 'felix', 'iratus'
+            'nero', 'felix', 'iratus', 'nihil'
 
         ];
-        return words[Math.floor(Math.random() * words.length)];
+        const wordsOutput = [];
+
+        for(let i = 1; i <= 50; i++){
+           wordsOutput.push(words[Math.floor(Math.random() * words.length)]);
+        }
+
+        return wordsOutput.join(" ");
     }
 
     greek () {
@@ -27,7 +33,13 @@ class Generator {
             "ζωή", "ῥῆμα", "κρίσις", "κελεύω", "ἔργον", "ἄρχω",
             "χώρα", "θέλημα"
           ];
-          return words[Math.floor(Math.random() * words.length)];
+          const wordsOutput = [];
+
+          for(let i = 1; i <= 50; i++){
+             wordsOutput.push(words[Math.floor(Math.random() * words.length)]);
+          }
+  
+          return wordsOutput.join(" ");
     }
 
     hebraic () {
@@ -43,7 +55,13 @@ class Generator {
             "שָׂפָה", "סֵפֶר", "מַלְאָךְ", "רַחֲמִים", "תְּפִלָּה",
             "שָׁנָה", "יוֹם", "לַיְלָה", "עוֹלָם", "קָדוֹשׁ"
           ];
-          return words[Math.floor(Math.random() * words.length)];
+          const wordsOutput = [];
+
+          for(let i = 1; i <= 50; i++){
+             wordsOutput.push(words[Math.floor(Math.random() * words.length)]);
+          }
+  
+          return wordsOutput.join(" ");
     }
 
     arabic () {
@@ -59,7 +77,13 @@ class Generator {
             "گرم", "سرد", "صبح", "شب", "رویا",
             "حقیقت", "عقل", "احساس", "کلمه", "صدا"
           ];
-        return words[Math.floor(Math.random() * words.length)];
+          const wordsOutput = [];
+
+          for(let i = 1; i <= 50; i++){
+             wordsOutput.push(words[Math.floor(Math.random() * words.length)]);
+          }
+  
+          return wordsOutput.join(" ");
     }
 
     coptic () {
@@ -115,7 +139,13 @@ class Generator {
             "ⲟⲩⲟϫ",    // sagrado
             "ⲡⲁⲣⲁⲇⲓⲥⲟⲥ" // paraíso
           ];
-          return words[Math.floor(Math.random() * words.length)];
+          const wordsOutput = [];
+
+          for(let i = 1; i <= 50; i++){
+             wordsOutput.push(words[Math.floor(Math.random() * words.length)]);
+          }
+  
+          return wordsOutput.join(" ");
     }
 
     cyrilic () {
@@ -131,7 +161,13 @@ class Generator {
             "ответ", "глаз", "рука", "голова", "знание",
             "наука", "душа", "смех", "слово", "тишина"
           ];
-          return words[Math.floor(Math.random() * words.length)];
+          const wordsOutput = [];
+
+          for(let i = 1; i <= 50; i++){
+             wordsOutput.push(words[Math.floor(Math.random() * words.length)]);
+          }
+  
+          return wordsOutput.join(" ");
     }
 }
 
