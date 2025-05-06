@@ -11,7 +11,7 @@ function Result({result, onClose}) {
         overlayClassName="result__overlay" 
         className="result__content" 
         >
-        <p>{result}</p>
+        <p className="result__paragraph">{result}</p>
       </Modal>
     )
   }

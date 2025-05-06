@@ -11,7 +11,7 @@
   }
   
   .result__content {
-    background: white;
+    background: #F1F0EF;
     padding: 20px;
     border-radius: 10px;
     max-width: 500px;
@@ -19,3 +19,9 @@
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     position: relative;
   }
+
+.result__paragraph {
+  background-color: #F1F0EF;
+  font-size: 20px;
+  line-height: 25px;
+}

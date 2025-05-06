@@ -5,6 +5,7 @@ import Result from '../components/Result';
 function App() {
 
   const [lang, setLang] = useState(1);
+  const [numberOfParagraphs, setNumberOfParagraphs] = useState(0);
   const [result, setResult] = useState('');
 
   const languageMap = {
@@ -27,26 +28,41 @@ function App() {
   }
 
   return (
-    <div>
-       <h1>Lorem Ipsum Generator</h1>
+    <main className="main">
+       <h1 className="main__title">Lorem Ipsum Generator</h1>
 
-       <form onSubmit={generate}>
-        <select value={lang} onChange={(e)=>setLang(e.target.value)}>
-          <option value="1">Latim</option>
-          <option value="2">Greek</option>
-          <option value="3">Hebraic</option>
-          <option value="4">Arabic</option>
-          <option value="5">Coptic</option>
-          <option value="6">Cyrilic</option>
+       <form onSubmit={generate} className="main__form">
+        <select 
+          value={lang} 
+          onChange={(e)=>setLang(e.target.value)} 
+          className="main__form-input"
+        >
+          <option value="1" className="main__form-input">Latim</option>
+          <option value="2" className="main__form-input">Greek</option>
+          <option value="3" className="main__form-input">Hebraic</option>
+          <option value="4" className="main__form-input">Arabic</option>
+          <option value="5" className="main__form-input">Coptic</option>
+          <option value="6" className="main__form-input">Cyrilic</option>
         </select>
 
-        <input type="number" placeholder="Number of words by paragraphs" />
+        <div className="main__form-input-box">
+          <label className="main__form-label">Number Of Paragraphs</label>
+          <input
+            type="number"
+            value={numberOfParagraphs}
+            onChange={(e)=>setNumberOfParagraphs(e.target.value)}
+            className="main__form-input"
+          />
+        </div>
 
-        <button type="submit">Generate</button>
+        <button 
+          type="submit"
+          className="main__form-button"
+        >Generate</button>
        </form>
 
        <Result result={result} onClose={closeResultModal}/>
-    </div>
+    </main>
   )
 }
 
