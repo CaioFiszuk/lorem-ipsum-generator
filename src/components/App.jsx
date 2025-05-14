@@ -17,11 +17,20 @@ function App() {
     6: generator.cyrilic
   };
 
-  const generate = (e) => {
-     e.preventDefault();
+ const generate = (e) => {
+  e.preventDefault();
 
-     setResult(languageMap[lang]);
+  const num = Number(numberOfParagraphs) || 1;
+  const generatorFunc = languageMap[lang];
+
+  let paragraphs = [];
+
+  for (let i = 0; i < num; i++) {
+    paragraphs.push(generatorFunc.call(generator));
   }
+
+  setResult(paragraphs.join(' '));
+};
 
   const closeResultModal = () => {
     setResult('');
